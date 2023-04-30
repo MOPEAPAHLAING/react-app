@@ -1,4 +1,5 @@
 import React from 'react'
+import Alert from './Alert';
 
 interface Props {
     children: string;
@@ -6,11 +7,14 @@ interface Props {
     onClick: () => void;
 }
 
+
 const Button = ({children, onClick, color}: Props) => {
   return (
-    <button className={'btn btn-' + color} onClick={onClick}>
-      {children}
-    </button>
+    <div>
+        <button className={'btn btn-' + color} onClick={onClick}>
+          {children}
+        </button>
+    </div>
   )
 }
 
